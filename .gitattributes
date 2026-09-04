@@ -1,0 +1,23 @@
+# https://git-scm.com/docs/gitattributes
+
+# Ensure consistent line endings across platforms
+* text=auto eol=lf
+
+# Explicitly declare text files
+*.js text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.svg text eol=lf
+
+# Binary files (declare explicitly so Git doesn't try to diff them)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.xpi binary
+*.zip binary

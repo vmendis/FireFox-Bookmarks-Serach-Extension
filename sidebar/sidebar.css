@@ -1,0 +1,103 @@
+/* sidebar.css - Firefox native sidebar styling via browser_style */
+
+/* Firefox applies its own theme variables when browser_style is true in manifest.
+   These are just a few overrides to match the mockup and ensure accessibility. */
+
+/* Container */
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 280px;
+    font: 14px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif;
+    color: var(--sidebar-text-color, var(--text-unselected-color, #202020));
+    background-color: var(--sidebar-background-color, var(--toolbar-background-color, #f8f9fa));
+}
+
+/* Search header */
+.search-header {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--sidebar-separator-color, var(--toolbar-separator-color, #bdc1c6));
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Search input - use native styling, just ensure full width */
+.search-header input[type="search"] {
+    flex: 1;
+    font-size: 14px;
+    padding: 6px 10px;
+    border: 1px solid var(--search-field-border-color, var(--toolbar-field-border-color, #767e85));
+    border-radius: 6px;
+    background-color: var(--search-field-background-color, var(--toolbar-field-background-color, #ffffff));
+    color: var(--search-field-text-color, var(--toolbar-field-text-color, #202020));
+    outline: none;
+}
+
+/* Search input focus */
+.search-header input[type="search"]:focus {
+    border-color: var(--toolbar-field-focus-border-color, #3a7dff);
+    box-shadow: 0 0 0 2px var(--toolbar-field-focus-background-color, #e8f0fe);
+}
+
+/* Results list */
+#results {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Result item */
+#results li {
+    padding: 6px 12px;
+    margin: 0;
+    cursor: pointer;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+/* Hover state */
+#results li:hover {
+    background-color: var(--toolbar-field-hover-background-color, #e2e6ea);
+}
+
+/* Selected/active result (keyboard navigation) */
+#results li.selected,
+#results li[aria-selected="true"] {
+    background-color: var(--toolbar-field-focus-background-color, #e8f0fe);
+    color: var(--toolbar-field-focus-text-color, #1e3a8a);
+}
+
+/* Focus ring for keyboard navigation */
+#results li:focus-visible {
+    outline: 2px solid var(--toolbar-field-focus-border-color, #3a7dff);
+    outline-offset: -2px;
+}
+
+/* Empty state */
+#empty-state {
+    padding: 20px;
+    text-align: center;
+    color: var(--sidebar-text-color, var(--text-unselected-color, #666));
+}
+
+/* Link inside result */
+#results a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+/* Result with folder path styling */
+#results .folder-path {
+    font-size: 12px;
+    color: var(--sidebar-text-color, var(--text-unselected-color, #666));
+    margin-top: 2px;
+    display: block;
+}

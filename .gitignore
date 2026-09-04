@@ -1,0 +1,39 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-*
+
+# Build artifacts
+*.xpi
+*.zip
+web-ext-build/
+
+# Node.js
+node_modules/
+
+# Development scripts (not needed in repo)
+generate_icons.py
+
+# Plans and notes (optional - remove if you want them in repo)
+plans/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Environment
+.env
+.env.*

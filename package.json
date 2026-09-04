@@ -1,0 +1,31 @@
+{
+    "name": "bookmark-search",
+    "version": "1.0.0",
+    "description": "A tiny Firefox WebExtension that adds a persistent sidebar with instant bookmark search",
+    "author": "Virantha Mendis",
+    "license": "MIT",
+    "scripts": {
+        "lint": "web-ext lint",
+        "build": "web-ext build",
+        "test": "node tests/test-search.js"
+    },
+    "keywords": [
+        "firefox",
+        "extension",
+        "webextension",
+        "sidebar",
+        "bookmarks",
+        "search"
+    ],
+    "devDependencies": {
+        "web-ext": "^8.3.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vmendis/bookmark-search.git"
+    },
+    "bugs": {
+        "url": "https://github.com/vmendis/bookmark-search/issues"
+    },
+    "private": true
+}

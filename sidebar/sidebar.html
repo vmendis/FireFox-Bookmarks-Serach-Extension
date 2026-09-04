@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bookmark Search</title>
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+
+<body>
+    <div class="sidebar-container">
+        <div class="search-header">
+            <input type="search" id="search" placeholder="Search bookmarks…" autocomplete="off" spellcheck="false"
+                autofocus>
+        </div>
+        <ul id="results" role="listbox"></ul>
+        <div id="empty-state" class="empty-state" hidden>
+            No bookmarks found.
+        </div>
+    </div>
+    <script src="sidebar.js" defer></script>
+</body>
+
+</html>
