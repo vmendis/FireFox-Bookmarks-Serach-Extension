@@ -17,9 +17,14 @@
 
 ### Temporary (for development/testing)
 
-1. Open Firefox and go to `about:debugging#/runtime/this-firefox`
-2. Click **Load Temporary Add-on**
-3. Select the `manifest.json` file in this directory
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/vmendis/bookmark-search.git
+   cd bookmark-search
+   ```
+2. Open Firefox and go to `about:debugging#/runtime/this-firefox`
+3. Click **Load Temporary Add-on**
+4. Select the `manifest.json` file in this directory
 
 ### Permanent (coming soon)
 
